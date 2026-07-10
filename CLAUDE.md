@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Static website for ICCP 2026 (International Conference on Computational Photography), July 13-15, 2026, Princeton, NJ. Hosted on GitHub Pages at iccp2026.iccp-conference.org.
+Static website for ICCP 2027 (International Conference on Computational Photography), Princeton, NJ. Hosted on GitHub Pages at iccp2027.iccp-conference.org. Currently a placeholder — all pages except the homepage are commented out of navigation.
 
 ## Tech Stack
 

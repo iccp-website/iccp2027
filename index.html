@@ -76,6 +76,7 @@
 				<section>
 					<h4>ICCP over the years:</h4>
 					<p>
+					<a href="https://iccp2026.iccp-conference.org/">2026</a> Princeton, NJ<br>
 					<a href="https://iccp2025.iccp-conference.org/">2025</a> Toronto, Canada<br>
 					<a href="https://iccp2024.iccp-conference.org/">2024</a> Lausanne, Switzerland<br>
 					<a href="https://iccp2023.iccp-conference.org/">2023</a> Madison, WI<br>
@@ -122,9 +123,9 @@
 	<script>
 		function loadContent() {
 		const hash = window.location.hash ? window.location.hash.substring(1) : 'home';
-		const page = `pages/${hash.split('/')[0]}.html`; // Only load the main page, ignore anchors
+		const page = `pages/${hash.split('/')[0]}.html?t=${Date.now()}`; // Only load the main page, ignore anchors
 	
-		fetch(page)
+		fetch(page, { cache: 'no-store' })
 			.then(response => {
 			if (!response.ok) {
 				throw new Error(`HTTP error! Status: ${response.status}`);

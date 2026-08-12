@@ -1,10 +1,22 @@
 <style>
-	#Team .card-image .image {
+	#Team .team-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+		gap: 1rem;
+	}
+	#Team .card {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	#Team .card-image figure.image {
 		position: relative;
+		margin: 0;
 		aspect-ratio: 1 / 1;
 		overflow: hidden;
 	}
 	#Team .card-image .image img {
+		display: block;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
@@ -23,19 +35,11 @@
 		letter-spacing: 0.08em;
 	}
 	#Team .team-card-body {
-		padding: 0.85rem 0.85rem 0.75rem;
-		text-align: center;
-	}
-	#Team .team-card-role {
-		margin-bottom: 0.2rem;
-		font-size: 0.75rem;
-		font-weight: 700;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-		color: #7a7a7a;
+		flex-grow: 1;
+		padding: 0.75rem 0.85rem;
 	}
 	#Team .team-card-name {
-		margin-bottom: 0.2rem;
+		margin-bottom: 0.15rem;
 		font-size: 1rem;
 		font-weight: 700;
 		line-height: 1.25;
@@ -44,346 +48,339 @@
 	#Team .team-card-affiliation {
 		margin-bottom: 0;
 		font-size: 0.9rem;
+		font-style: italic;
 		line-height: 1.25;
 		color: #666666;
+	}
+	#Team .team-card-role {
+		display: block;
+		padding: 0.4rem 0.85rem;
+		border-top: 1px solid #ededed;
+		background-color: #fafafa;
+		font-size: 0.85rem;
+		line-height: 1.3;
+		text-align: center;
+		color: #4a4a4a;
 	}
 </style>
 
 <section class="section container is-max-desktop content" id="Team">
 	<h2 class="title">Team</h2>
 
-	<section class="subsection">
-		<h3 class="subtitle">Program Chairs</h3>
-		<div class="columns is-variable is-0 is-multiline">
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/chris_metzler.jpg" alt="Chris Metzler">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name"><a href="https://www.cs.umd.edu/people/metzler" target="_blank">Chris Metzler</a></p>
-						<p class="team-card-affiliation">University of Maryland</p>
-					</div>
+	<div class="team-grid">
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/chris_metzler.jpg" alt="Chris Metzler">
+					</figure>
 				</div>
-			</div>
-
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/adithya_pediredla.jpeg" alt="Adithya Pediredla">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name"><a href="https://faculty-directory.dartmouth.edu/adithya-k-pediredla" target="_blank">Adithya Pediredla</a></p>
-						<p class="team-card-affiliation">Dartmouth College</p>
-					</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://www.cs.umd.edu/people/metzler" target="_blank">Chris Metzler</a></p>
+					<p class="team-card-affiliation">University of Maryland</p>
 				</div>
-			</div>
-
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/abbie_watnik.jpg" alt="Abbie Watnik">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name"><a href="https://www.optica.org/about/leadership_and_volunteers/board/abbie_t_watnik/" target="_blank">Abbie Watnick</a></p>
-						<p class="team-card-affiliation">Naval Research Laboratory</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/gordon.jpg" alt="Gordon Wetzstein">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name"><a href="https://stanford.edu/~gordonwz/" target="_blank">Gordon Wetzstein</a></p>
-						<p class="team-card-affiliation">Stanford University</p>
-					</div>
-				</div>
+				<p class="team-card-role">Program Chair</p>
 			</div>
 		</div>
-	</section>
 
-	<section class="subsection">
-		<h3 class="subtitle">Finance Chairs</h3>
-		<div class="columns is-variable is-0 is-multiline">
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/Qi_guo.jpg" alt="Qi Guo">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name"><a href="https://engineering.purdue.edu/ECE/People/ptProfile?resource_id=256878" target="_blank">Qi Guo</a></p>
-						<p class="team-card-affiliation">Purdue University</p>
-					</div>
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/adithya_pediredla.jpeg" alt="Adithya Pediredla">
+					</figure>
 				</div>
-			</div>
-
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/Atul_Ingle_Headshot.jpg" alt="Atul Ingle">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name"><a href="https://web.cecs.pdx.edu/~ingle2/" target="_blank">Atul Ingle</a></p>
-						<p class="team-card-affiliation">Portland State University</p>
-					</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://faculty-directory.dartmouth.edu/adithya-k-pediredla" target="_blank">Adithya Pediredla</a></p>
+					<p class="team-card-affiliation">Dartmouth College</p>
 				</div>
+				<p class="team-card-role">Program Chair</p>
 			</div>
 		</div>
-	</section>
 
-	<section class="subsection">
-		<h3 class="subtitle">Poster and Demo Chairs</h3>
-		<div class="columns is-variable is-0 is-multiline">
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/praneeth_chakravarthula.jpeg" alt="Praneeth C">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name"><a href="https://www.cs.unc.edu/~cpk/" target="_blank">Praneeth Chakravarthula</a></p>
-						<p class="team-card-affiliation">UNC Chapel Hill</p>
-					</div>
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/abbie_watnik.jpg" alt="Abbie Watnik">
+					</figure>
 				</div>
-			</div>
-
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/emma.jpg" alt="Emma Alexander">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name"><a href="https://www.alexander.vision/emma" target="_blank">Emma Alexander</a></p>
-						<p class="team-card-affiliation">Northwestern University</p>
-					</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://www.optica.org/about/leadership_and_volunteers/board/abbie_t_watnik/" target="_blank">Abbie Watnick</a></p>
+					<p class="team-card-affiliation">Naval Research Laboratory</p>
 				</div>
+				<p class="team-card-role">Program Chair</p>
 			</div>
 		</div>
-	</section>
 
-	<section class="subsection">
-		<h3 class="subtitle">Summer School Chairs</h3>
-		<div class="columns is-variable is-0 is-multiline">
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/ioannis.png" alt="Ioannis Gkioulekas">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name"><a href="https://imaging.cs.cmu.edu/igkioule/" target="_blank">Ioannis Gkioulekas</a></p>
-						<p class="team-card-affiliation">Carnegie Mellon University</p>
-					</div>
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/gordon.jpg" alt="Gordon Wetzstein">
+					</figure>
 				</div>
-			</div>
-
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/katie.png" alt="Katie Bouman">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name"><a href="https://users.cms.caltech.edu/~klbouman/" target="_blank">Katie Bouman</a></p>
-						<p class="team-card-affiliation">Caltech</p>
-					</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://stanford.edu/~gordonwz/" target="_blank">Gordon Wetzstein</a></p>
+					<p class="team-card-affiliation">Stanford University</p>
 				</div>
-			</div>
-
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/Mohit_Gupta.jpg" alt="Mohit Gupta">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name"><a href="https://wisionlab.com/people/mohit-gupta/" target="_blank">Mohit Gupta</a></p>
-						<p class="team-card-affiliation">Univ. of Wisconsin-Madison</p>
-					</div>
-				</div>
+				<p class="team-card-role">Program Chair</p>
 			</div>
 		</div>
-	</section>
 
-	<section class="subsection">
-		<h3 class="subtitle">Publication, Website, Industry &amp; Social Media Chairs</h3>
-		<div class="columns is-variable is-0 is-multiline">
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/vivek.png" alt="Vivek Boominathan">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-role">Publication Chair</p>
-						<p class="team-card-name"><a href="https://vivekboominathan.com/" target="_blank">Vivek Boominathan</a></p>
-						<p class="team-card-affiliation">Rice University</p>
-					</div>
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/Qi_guo.jpg" alt="Qi Guo">
+					</figure>
 				</div>
-			</div>
-
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/ram_bhaskara.JPG" alt="Ram Bhaskara">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-role">Website Chair</p>
-						<p class="team-card-name"><a href="https://ram-bhaskara.github.io/" target="_blank">Ramchander Bhaskara</a></p>
-						<p class="team-card-affiliation">Dartmouth College</p>
-					</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://engineering.purdue.edu/ECE/People/ptProfile?resource_id=256878" target="_blank">Qi Guo</a></p>
+					<p class="team-card-affiliation">Purdue University</p>
 				</div>
-			</div>
-
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/tom_bishop.webp" alt="Tom Bishop">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-role">Industry Chair</p>
-						<p class="team-card-name"><a href="https://www.glass-imaging.com/team/tom-bishop" target="_blank">Tom Bishop</a></p>
-						<p class="team-card-affiliation">GLASS Imaging</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- <div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<div class="team-placeholder">RN</div>
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-role">Industry Chair</p>
-						<p class="team-card-name">Ren Ng</p>
-						<p class="team-card-affiliation">Affiliation TBD</p>
-					</div>
-				</div>
-			</div> -->
-
-			<!-- <div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<div class="team-placeholder">HM</div>
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-role">Industry Chair</p>
-						<p class="team-card-name">Hassan Mansour</p>
-						<p class="team-card-affiliation">Affiliation TBD</p>
-					</div>
-				</div>
-			</div> -->
-
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/ilya.png" alt="Ilya Chugunov">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-role">Social Media Chair</p>
-						<p class="team-card-name"><a href="https://ilyac.info/" target="_blank">Ilya Chugunov</a></p>
-						<p class="team-card-affiliation">Adobe</p>
-					</div>
-				</div>
+				<p class="team-card-role">Finance Chair</p>
 			</div>
 		</div>
-	</section>
 
-	<section class="subsection">
-		<h3 class="subtitle">Local Arrangements Chairs</h3>
-		<div class="columns is-variable is-0 is-multiline">
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/mel_white.jpg" alt="Mel White">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name"><a href="https://meljwhite.com/" target="_blank">Mel White</a></p>
-						<p class="team-card-affiliation">Naval Research Laboratory</p>
-					</div>
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/Atul_Ingle_Headshot.jpg" alt="Atul Ingle">
+					</figure>
 				</div>
-			</div>
-
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<img class="team-photo" src="./static/img/team/yu_sun.webp" alt="Yu Sun">
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name"><a href="https://engineering.jhu.edu/faculty/yu-sun/" target="_blank">Yu Sun</a></p>
-						<p class="team-card-affiliation">Johns Hopkins University</p>
-					</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://web.cecs.pdx.edu/~ingle2/" target="_blank">Atul Ingle</a></p>
+					<p class="team-card-affiliation">Portland State University</p>
 				</div>
+				<p class="team-card-role">Finance Chair</p>
 			</div>
 		</div>
-	</section>
 
-	<!-- <section class="subsection">
-		<h3 class="subtitle">Federal Lab Outreach Chairs</h3>
-		<div class="columns is-variable is-0 is-multiline">
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<div class="team-placeholder">HE</div>
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name">Henry Everitt / Joe Mait</p>
-						<p class="team-card-affiliation">Affiliation TBD</p>
-					</div>
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/praneeth_chakravarthula.jpeg" alt="Praneeth C">
+					</figure>
 				</div>
-			</div>
-
-			<div class="column is-one-quarter">
-				<div class="card">
-					<div class="card-image">
-						<figure class="image">
-							<div class="team-placeholder">RG</div>
-						</figure>
-					</div>
-					<div class="card-content team-card-body">
-						<p class="team-card-name">Ritwik Gupta</p>
-						<p class="team-card-affiliation">Affiliation TBD</p>
-					</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://www.cs.unc.edu/~cpk/" target="_blank">Praneeth Chakravarthula</a></p>
+					<p class="team-card-affiliation">UNC Chapel Hill</p>
 				</div>
+				<p class="team-card-role">Poster and Demo Chair</p>
 			</div>
 		</div>
-	</section>
-</section> -->
+
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/emma.jpg" alt="Emma Alexander">
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://www.alexander.vision/emma" target="_blank">Emma Alexander</a></p>
+					<p class="team-card-affiliation">Northwestern University</p>
+				</div>
+				<p class="team-card-role">Poster and Demo Chair</p>
+			</div>
+		</div>
+
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/ioannis.png" alt="Ioannis Gkioulekas">
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://imaging.cs.cmu.edu/igkioule/" target="_blank">Ioannis Gkioulekas</a></p>
+					<p class="team-card-affiliation">Carnegie Mellon University</p>
+				</div>
+				<p class="team-card-role">Summer School Chair</p>
+			</div>
+		</div>
+
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/katie.png" alt="Katie Bouman">
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://users.cms.caltech.edu/~klbouman/" target="_blank">Katie Bouman</a></p>
+					<p class="team-card-affiliation">Caltech</p>
+				</div>
+				<p class="team-card-role">Summer School Chair</p>
+			</div>
+		</div>
+
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/Mohit_Gupta.jpg" alt="Mohit Gupta">
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://wisionlab.com/people/mohit-gupta/" target="_blank">Mohit Gupta</a></p>
+					<p class="team-card-affiliation">Univ. of Wisconsin-Madison</p>
+				</div>
+				<p class="team-card-role">Summer School Chair</p>
+			</div>
+		</div>
+
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/vivek.png" alt="Vivek Boominathan">
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://vivekboominathan.com/" target="_blank">Vivek Boominathan</a></p>
+					<p class="team-card-affiliation">Rice University</p>
+				</div>
+				<p class="team-card-role">Publication Chair</p>
+			</div>
+		</div>
+
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/ram_bhaskara.JPG" alt="Ram Bhaskara">
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://ram-bhaskara.github.io/" target="_blank">Ramchander Bhaskara</a></p>
+					<p class="team-card-affiliation">Dartmouth College</p>
+				</div>
+				<p class="team-card-role">Website Chair</p>
+			</div>
+		</div>
+
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/tom_bishop.webp" alt="Tom Bishop">
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://www.glass-imaging.com/team/tom-bishop" target="_blank">Tom Bishop</a></p>
+					<p class="team-card-affiliation">GLASS Imaging</p>
+				</div>
+				<p class="team-card-role">Industry Chair</p>
+			</div>
+		</div>
+
+		<!-- <div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<div class="team-placeholder">RN</div>
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name">Ren Ng</p>
+					<p class="team-card-affiliation">Affiliation TBD</p>
+				</div>
+				<p class="team-card-role">Industry Chair</p>
+			</div>
+		</div> -->
+
+		<!-- <div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<div class="team-placeholder">HM</div>
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name">Hassan Mansour</p>
+					<p class="team-card-affiliation">Affiliation TBD</p>
+				</div>
+				<p class="team-card-role">Industry Chair</p>
+			</div>
+		</div> -->
+
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/ilya.png" alt="Ilya Chugunov">
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://ilyac.info/" target="_blank">Ilya Chugunov</a></p>
+					<p class="team-card-affiliation">Adobe</p>
+				</div>
+				<p class="team-card-role">Social Media Chair</p>
+			</div>
+		</div>
+
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/mel_white.jpg" alt="Mel White">
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://meljwhite.com/" target="_blank">Mel White</a></p>
+					<p class="team-card-affiliation">Naval Research Laboratory</p>
+				</div>
+				<p class="team-card-role">Local Arrangements Chair</p>
+			</div>
+		</div>
+
+		<div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<img class="team-photo" src="./static/img/team/yu_sun.webp" alt="Yu Sun">
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name"><a href="https://engineering.jhu.edu/faculty/yu-sun/" target="_blank">Yu Sun</a></p>
+					<p class="team-card-affiliation">Johns Hopkins University</p>
+				</div>
+				<p class="team-card-role">Local Arrangements Chair</p>
+			</div>
+		</div>
+
+		<!-- <div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<div class="team-placeholder">HE</div>
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name">Henry Everitt / Joe Mait</p>
+					<p class="team-card-affiliation">Affiliation TBD</p>
+				</div>
+				<p class="team-card-role">Federal Lab Outreach Chair</p>
+			</div>
+		</div> -->
+
+		<!-- <div class="team-member">
+			<div class="card">
+				<div class="card-image">
+					<figure class="image">
+						<div class="team-placeholder">RG</div>
+					</figure>
+				</div>
+				<div class="card-content team-card-body">
+					<p class="team-card-name">Ritwik Gupta</p>
+					<p class="team-card-affiliation">Affiliation TBD</p>
+				</div>
+				<p class="team-card-role">Federal Lab Outreach Chair</p>
+			</div>
+		</div> -->
+	</div>
+</section>

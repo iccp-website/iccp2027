@@ -30,6 +30,12 @@ nav > .hero-body {
 	min-height: 300px;
 }
 
+/* Footer heading: an h2 for document structure, sized like Bulma's .content h4 */
+.footer .footer-heading {
+	font-size: 1.25em;
+	margin-bottom: 0.8em;
+}
+
 .footer .icon-link {
     font-size: 25px;
     color: #000;

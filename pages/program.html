@@ -3,45 +3,6 @@
 
 <!-- ICCP 2026 Program (at-a-glance) — paste this whole block into your site -->
 <div class="iccp-program">
-<style>
-.iccp-program {
-  --iccp-keynote: #FFE0B2;
-  --iccp-invited: #DCEDC8;
-  --iccp-paper:   #E4F3FE;
-  --iccp-poster:  #F9BBD0;
-  --iccp-break:   #EEEEEC;
-  --iccp-social:  #EDE7F6;
-  --iccp-ink: #1f2421;
-  --iccp-mut: #6a716c;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: var(--iccp-ink);
-}
-.iccp-wrap { display: grid; grid-template-columns: 54px repeat(3, 1fr); gap: 0 14px; align-items: start; }
-.iccp-gutter { position: relative; }
-.iccp-hour { position: absolute; right: 4px; transform: translateY(-50%); font-size: 0.92rem; color: var(--iccp-mut); font-variant-numeric: tabular-nums; }
-.iccp-dayname { font-size: 1.1rem; font-weight: 700; margin: 0 0 8px; text-align: center; }
-.iccp-gutterhead { height: calc(1.1rem * 1.5 + 8px); }
-.iccp-canvas { position: relative; }
-.iccp-gridline { position: absolute; left: 0; right: 0; border-top: 1px dashed #d8d8d4; }
-.iccp-evt { position: absolute; left: 0; right: 0; border-radius: 6px; padding: 6px 10px; overflow: hidden; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06); }
-.iccp-evttime { font-size: 0.76rem; font-weight: 600; color: var(--iccp-mut); font-variant-numeric: tabular-nums; line-height: 1.2; }
-.iccp-evttitle { font-size: 0.92rem; font-weight: 600; line-height: 1.2; }
-.iccp-evtdetail { font-size: 0.72rem; font-weight: 600; line-height: 1.25; margin-top: 3px; }
-.iccp-sold-out { color: #ff3860; font-weight: 700; }
-.iccp-compact { flex-direction: row; align-items: center; gap: 6px; padding: 0 10px; }
-.iccp-compact .iccp-evttitle { font-size: 0.82rem; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
-.iccp-keynote { background: var(--iccp-keynote); }
-.iccp-invited { background: var(--iccp-invited); }
-.iccp-paper   { background: var(--iccp-paper); }
-.iccp-poster  { background: var(--iccp-poster); }
-.iccp-break   { background: var(--iccp-break); }
-.iccp-social  { background: var(--iccp-social); }
-.iccp-legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 0 0 16px; font-size: 0.92rem; }
-.iccp-legend span { display: inline-flex; align-items: center; gap: 6px; }
-.iccp-swatch { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
-.iccp-scroll { overflow-x: auto; }
-@media (max-width: 760px) { .iccp-wrap { min-width: 680px; } }
-</style>
 <div class="iccp-legend">
   <span><i class="iccp-swatch" style="background:var(--iccp-keynote)"></i>Keynote</span>
   <span><i class="iccp-swatch" style="background:var(--iccp-invited)"></i>Invited-talk session</span>
@@ -58,79 +19,6 @@
 <div style="margin-bottom: 2rem;"></div>
 </div>
 
-    <style>
-        .program-day {
-            margin-top: 2rem;
-        }
-
-        .program-table td,
-        .program-table th {
-            vertical-align: middle;
-        }
-
-        .program-time {
-            white-space: nowrap;
-            width: 18%;
-        }
-
-        .program-code {
-            white-space: nowrap;
-            width: 12%;
-            font-weight: 600;
-        }
-
-        .program-session {
-            background-color: #e9ecef;
-            font-weight: 600;
-        }
-
-        .program-break {
-            background-color: #e9ecef;
-            font-weight: 600;
-        }
-
-        .program-poster {
-            background-color: #e9ecef;
-            font-weight: 600;
-        }
-
-        .program-social {
-            background-color: #ede7f6;
-            font-weight: 600;
-        }
-
-        .program-social-detail {
-            font-weight: 400;
-        }
-
-        .program-sold-out {
-            color: #ff3860;
-        }
-
-        .program-fill-4 {
-            background-color: #f9bbd0;
-        }
-
-        .program-fill-5 {
-            background-color: #ffe0b2;
-        }
-
-        .program-fill-6 {
-            background-color: #ffe0b2;
-        }
-
-        .program-fill-7 {
-            background-color: #dcedc8;
-        }
-
-        .program-fill-8 {
-            background-color: #e4f3fe;
-        }
-
-        .program-fill-9 {
-            background-color: #dcedc8;
-        }
-    </style>
 
     <h3 class="title is-4 program-day">Monday, July 13th, 2026</h3>
     <div class="table-container">
